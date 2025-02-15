@@ -1,11 +1,17 @@
 
+import { Outlet } from 'react-router-dom'
+
 function App() {
-  return (
-    <>
-      <div className="text-4xl text-center underline">
-        Testing
+  return  (
+    <div className='bg-custom'>
+      <div >
+        {/* <Navbar /> */}
+        <main>
+        <Outlet />
+        </main>
+        {/* <Footer /> */}
       </div>
-    </>
+    </div>
   )
 }
 
