@@ -2,6 +2,7 @@ import type React from "react"
 
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
 
 export default function LoginForm() {
   const [email, setEmail] = useState("")
@@ -67,12 +68,14 @@ export default function LoginForm() {
         />
       </div>
       {error && <p className="text-red-500">{error}</p>}
-      <button
+      <motion.button
         onClick={handleSubmit}
         className="w-full rounded-md bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
       >
         {loading ? "Loading..." : "Login"}
-      </button>
+      </motion.button>
     </form>
   )
 }
