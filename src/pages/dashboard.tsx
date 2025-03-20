@@ -1,4 +1,8 @@
+import { useSelector } from "react-redux";
+
 export default function DashboardPage() {
+  const user = useSelector((state) => state.auth.userData);
+  console.log(user)
   return (
     <>
     <div className="flex min-h-screen items-center justify-center bg-gray-100">

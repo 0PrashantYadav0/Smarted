@@ -1,9 +1,6 @@
-"use client"
-
 import type React from "react"
-
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { motion } from "framer-motion"
 
 export default function SignupForm() {
@@ -77,12 +74,9 @@ export default function SignupForm() {
     }
 
     return (
-        <motion.form
+        <form
             onSubmit={handleSubmit}
             className="space-y-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
         >
             <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -207,7 +201,16 @@ export default function SignupForm() {
             >
                 {loading ? "Loading..." : "Sign Up"}
             </motion.button>
-        </motion.form>
+            <p className="text-sm">
+                Already have an account?{" "}
+                <Link
+                    to="/login"
+                    className="font-medium text-purple-600 hover:text-purple-500"
+                >
+                    Login
+                </Link>
+            </p>
+        </form>
     )
 }
 
