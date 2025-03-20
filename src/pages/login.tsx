@@ -1,5 +1,5 @@
-import LoginForm from "@/components/LoginForm"
-import PurpleWave from "@/components/PurpleWave"
+import LoginForm from "@/components/login-form"
+import PurpleWave from "@/components/purple-wave"
 
 export default function LoginPage() {
   return (

@@ -1,11 +1,12 @@
 
 import { Outlet } from 'react-router-dom'
+import { AppSidebar } from '@/components/sidebar'
 
 function App() {
   return  (
     <div className='bg-custom'>
       <div >
-        {/* <Navbar /> */}
+        <AppSidebar />
         <main>
         <Outlet />
         </main>

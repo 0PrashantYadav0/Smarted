@@ -13,7 +13,7 @@ export default function SignupForm() {
         SchoolCode: "",
     })
     const [error, setError] = useState("")
-    const [image, setImage] = useState<File | null>(null)
+    const [_, setImage] = useState<File | null>(null)
     const [loading, setLoading] = useState(false)
     const router = useNavigate()
 

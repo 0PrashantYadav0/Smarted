@@ -1,5 +1,5 @@
-import SignupForm from "@/components/SignUpForm"
-import PurpleWave from "@/components/PurpleWave"
+import SignupForm from "@/components/signup-form"
+import PurpleWave from "@/components/purple-wave"
 
 export default function SignupPage() {
   return (
